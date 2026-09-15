@@ -1,22 +1,17 @@
-# Héctor García · Portafolio tecnológico
+# Portafolio · Héctor García
 
-Sitio personal para presentar una selección de proyectos de desarrollo web, plataformas operativas, ERP/CRM, automatización e integraciones.
+Código fuente de mi portafolio profesional publicado con GitHub Pages.
 
-**Sitio:** https://hector-gc99.github.io/
+## Contenido
 
-## Objetivo
+La versión actual reúne cuatro casos principales:
 
-El portafolio está diseñado como una experiencia visual y breve. Los proyectos se cargan desde una fuente de datos centralizada y pueden incluir un enlace público cuando existe un sitio que se pueda mostrar.
+- Central de Monitoreo EC
+- Aerocomercial / ADT
+- Codeus SORN
+- Odoo · Soluciones empresariales
 
-## Stack
-
-- HTML5 semántico
-- CSS3 responsive
-- JavaScript Vanilla
-- JSON como fuente de datos
-- GitHub Pages para publicación
-
-No utiliza frameworks, Node, Composer, base de datos ni proceso de compilación.
+El sitio también resume tecnologías y herramientas complementarias utilizadas en desarrollo, datos, automatización, infraestructura web, analítica y administración de plataformas.
 
 ## Estructura
 
@@ -24,11 +19,6 @@ No utiliza frameworks, Node, Composer, base de datos ni proceso de compilación.
 .
 ├── index.html
 ├── 404.html
-├── .nojekyll
-├── .gitignore
-├── robots.txt
-├── sitemap.xml
-├── site.webmanifest
 ├── data/
 │   └── projects.json
 └── assets/
@@ -37,55 +27,16 @@ No utiliza frameworks, Node, Composer, base de datos ni proceso de compilación.
     ├── js/
     │   └── app.js
     ├── icons/
-    │   └── favicon.svg
     └── img/
-        ├── social-preview.png
         └── projects/
 ```
 
-## Administrar proyectos
-
-Los proyectos se editan en `data/projects.json`. La interfaz se genera desde JavaScript, por lo que no es necesario duplicar tarjetas en `index.html`.
-
-Campos principales:
-
-- `title`, `subtitle`, `category`, `status`, `year`
-- `summary`, `challenge`, `solution`, `role`
-- `technologies`, `highlights`
-- `url`: URL pública; dejar vacío para sistemas internos
-- `featured`: prioriza visualmente un proyecto
-- `accent`: `mint`, `blue`, `amber`, `violet` o `rose`
-
-## Publicación en GitHub Pages
-
-Este repositorio está preparado para utilizarse como sitio de usuario de GitHub Pages. El nombre esperado del repositorio es:
-
-```text
-Hector-GC99.github.io
-```
-
-Después de subir los archivos a la rama `main`, en **Settings → Pages** selecciona **Deploy from a branch**, rama `main` y carpeta `/ (root)`.
-
-El sitio quedará disponible en:
-
-```text
-https://hector-gc99.github.io/
-```
-
-## Desarrollo local
-
-`projects.json` se obtiene mediante `fetch()`, por lo que para una previsualización fiel conviene utilizar un servidor HTTP local en lugar de abrir `index.html` mediante `file://`.
-
-Ejemplos: Live Server de VS Code, `php -S localhost:8000` o cualquier servidor estático local.
+Los datos generales de los proyectos están centralizados en `data/projects.json`. La lógica de interacción se mantiene en `assets/js/app.js` y la presentación en `assets/css/styles.css`.
 
 ## Privacidad
 
-Todo el contenido de este repositorio debe considerarse público. Antes de incorporar capturas de sistemas internos se deben retirar o difuminar credenciales, nombres personales, correos, teléfonos, folios, datos comerciales, endpoints privados y cualquier otra información sensible.
+Las imágenes de sistemas internos incluidas en el portafolio se preparan específicamente para publicación y no deben contener credenciales, identificadores técnicos, datos personales ni registros operativos sensibles.
 
-## Próximas mejoras
+## Publicación
 
-- Incorporar capturas reales optimizadas en WebP/AVIF.
-- Completar la URL pública de Codeus cuando se valide.
-- Crear casos de estudio visuales para proyectos prioritarios.
-- Incorporar medios de contacto públicos que se decidan mostrar.
-- Conectar un dominio propio si se requiere.
+El repositorio está preparado para servirse directamente mediante GitHub Pages desde la rama `main`.

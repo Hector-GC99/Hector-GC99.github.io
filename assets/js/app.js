@@ -17,22 +17,52 @@
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 
+  const safeUrl = (value = "") => {
+    if (!value) return "";
+    try {
+      const url = new URL(value, window.location.origin);
+      return ["http:", "https:"].includes(url.protocol) ? url.href : "";
+    } catch {
+      return "";
+    }
+  };
+
+  const projectVisual = (project) => {
+    if (project.preview) {
+      return `<div class="project-preview project-preview-image"><img src="${escapeHtml(project.preview)}" alt="" loading="lazy"></div>`;
+    }
+    if (project.previewKind === "split") {
+      return `<div class="project-preview project-preview-split" aria-hidden="true">
+        <div><small>SITIO 01</small><strong>Cotizaciones</strong><span>Formulario · folios · medición</span></div>
+        <div><small>SITIO 02</small><strong>Subdistribuidores</strong><span>Operación · integración · datos</span></div>
+      </div>`;
+    }
+    if (project.previewKind === "codeus") {
+      return `<div class="project-preview project-preview-codeus" aria-hidden="true">
+        <div class="mini-browser"><span></span><span></span><span></span><b>CODEUS · SORN</b></div>
+        <div class="codeus-message">IA <i>→</i> clasifica <i>→</i> canaliza</div>
+        <div class="codeus-nodes"><span>Ventas</span><span>Soporte</span><span>Atención</span></div>
+      </div>`;
+    }
+    return `<div class="project-preview project-preview-modules" aria-hidden="true">
+      <span>Inventario</span><span>CRM</span><span>Traspasos</span><span>Agenda</span><span>Automatización</span>
+    </div>`;
+  };
+
   const projectCard = (project) => `
-    <article class="project-card ${project.featured ? "project-card-featured" : ""} accent-${escapeHtml(project.accent)} reveal" data-project-card data-category="${escapeHtml(project.category)}">
-      <button class="project-hit" type="button" data-open-project="${escapeHtml(project.id)}" aria-label="Explorar ${escapeHtml(project.title)}"></button>
+    <article class="project-card ${project.featured ? "project-card-featured" : ""} accent-${escapeHtml(project.accent)} reveal" data-category="${escapeHtml(project.category)}">
+      <button class="project-hit" type="button" data-open-project="${escapeHtml(project.id)}" aria-label="Ver ${escapeHtml(project.title)}"></button>
       <div class="project-topline">
         <span>${escapeHtml(project.order)}</span>
         <span class="project-status"><i></i>${escapeHtml(project.status)}</span>
       </div>
-      <div class="project-art" aria-hidden="true">
-        <span class="art-ring"></span><span class="art-block"></span><span class="art-code">${escapeHtml(project.order)}</span>
-      </div>
+      ${projectVisual(project)}
       <div class="project-body">
         <p class="project-category">${escapeHtml(project.category)} · ${escapeHtml(project.year)}</p>
         <h3>${escapeHtml(project.title)}</h3>
         <p>${escapeHtml(project.summary)}</p>
-        <div class="project-tags">${project.technologies.slice(0, 4).map((tech) => `<span>${escapeHtml(tech)}</span>`).join("")}</div>
-        <div class="project-link">Explorar proyecto <span>↗</span></div>
+        <div class="project-tags">${project.technologies.slice(0,4).map((tech) => `<span>${escapeHtml(tech)}</span>`).join("")}</div>
+        <div class="project-link">Ver proyecto <span>→</span></div>
       </div>
     </article>`;
 
@@ -51,24 +81,73 @@
     `).join("");
   };
 
+  const galleryMarkup = (project) => {
+    if (!project.gallery?.length) return "";
+    return `<section class="modal-wide gallery-section">
+      <small>RECORRIDO DEL PROYECTO</small>
+      <div class="case-gallery">
+        ${project.gallery.map((item, index) => `<figure class="case-shot ${index === 0 ? "case-shot-lead" : ""}">
+          <div class="case-image"><img src="${escapeHtml(item.src)}" alt="${escapeHtml(item.title)}" loading="lazy"></div>
+          <figcaption><span>${String(index + 1).padStart(2, "0")}</span><div><strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(item.text)}</p></div></figcaption>
+        </figure>`).join("")}
+      </div>
+    </section>`;
+  };
+
+  const variantContent = (variant) => {
+    const url = safeUrl(variant.url);
+    return `<div class="variant-panel">
+      <div>
+        <p class="variant-kicker">${escapeHtml(variant.label)}</p>
+        <h3>${escapeHtml(variant.title)}</h3>
+        <p>${escapeHtml(variant.text)}</p>
+      </div>
+      <div class="variant-role"><small>MI PARTICIPACIÓN</small><p>${escapeHtml(variant.role)}</p></div>
+      <div class="project-tags project-tags-large">${variant.technologies.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</div>
+      ${url ? `<a class="button button-primary" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Visitar sitio <span>↗</span></a>` : ""}
+    </div>`;
+  };
+
+  const variantsMarkup = (project) => {
+    if (!project.variants?.length) return "";
+    return `<section class="modal-wide variants-section">
+      <small>SITIOS PUBLICADOS</small>
+      <div class="variant-tabs" role="tablist" aria-label="Sitios de ${escapeHtml(project.title)}">
+        ${project.variants.map((variant, index) => `<button type="button" role="tab" aria-selected="${index === 0}" class="variant-tab ${index === 0 ? "is-active" : ""}" data-variant-project="${escapeHtml(project.id)}" data-variant-id="${escapeHtml(variant.id)}">${escapeHtml(variant.label)}</button>`).join("")}
+      </div>
+      <div data-variant-content>${variantContent(project.variants[0])}</div>
+    </section>`;
+  };
+
+  const modulesMarkup = (project) => {
+    if (!project.modules?.length) return "";
+    return `<section class="modal-wide modules-section">
+      <small>ÁREAS IMPLEMENTADAS</small>
+      <div class="module-grid">${project.modules.map((module) => `<article><strong>${escapeHtml(module.title)}</strong><p>${escapeHtml(module.text)}</p></article>`).join("")}</div>
+    </section>`;
+  };
+
   const modalMarkup = (project) => {
-    const externalLink = project.url
-      ? `<a class="button button-primary" href="${escapeHtml(project.url)}" target="_blank" rel="noopener noreferrer">Visitar sitio <span>↗</span></a>`
-      : `<span class="availability-note">${project.status === "Proyecto público" ? "URL pública por configurar" : "Caso de estudio · sin acceso público"}</span>`;
+    const url = safeUrl(project.url);
+    const access = url
+      ? `<a class="button button-primary" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Visitar sitio <span>↗</span></a>`
+      : project.variants?.length ? "" : `<span class="availability-note">${project.status.includes("intern") || project.status === "Sistema interno" ? "Caso de proyecto · sin acceso público" : "Implementación interna"}</span>`;
 
     return `
       <header class="modal-hero accent-${escapeHtml(project.accent)}">
         <p class="project-category">${escapeHtml(project.order)} · ${escapeHtml(project.category)} · ${escapeHtml(project.year)}</p>
         <h2 id="modal-title">${escapeHtml(project.title)}</h2>
         <p>${escapeHtml(project.subtitle)}</p>
-        <div class="modal-actions">${externalLink}</div>
+        <div class="modal-actions">${access}</div>
       </header>
       <div class="modal-body">
-        <section><small>EL RETO</small><p>${escapeHtml(project.challenge)}</p></section>
-        <section><small>LA SOLUCIÓN</small><p>${escapeHtml(project.solution)}</p></section>
+        <section><small>RESUMEN</small><p>${escapeHtml(project.overview)}</p></section>
         <section><small>MI PARTICIPACIÓN</small><p>${escapeHtml(project.role)}</p></section>
+        ${variantsMarkup(project)}
+        ${galleryMarkup(project)}
+        ${modulesMarkup(project)}
         <section class="modal-wide"><small>ALCANCE</small><div class="feature-list">${project.highlights.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</div></section>
-        <section class="modal-wide"><small>TECNOLOGÍAS</small><div class="project-tags project-tags-large">${project.technologies.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</div></section>
+        <section class="modal-wide"><small>TECNOLOGÍAS Y HERRAMIENTAS</small><div class="project-tags project-tags-large">${project.technologies.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</div></section>
       </div>`;
   };
 
@@ -104,7 +183,7 @@
           currentObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.1 });
     items.forEach((item) => observer.observe(item));
   };
 
@@ -118,7 +197,25 @@
     }
 
     const projectTrigger = event.target.closest("[data-open-project]");
-    if (projectTrigger) openModal(projectTrigger.dataset.openProject);
+    if (projectTrigger) {
+      openModal(projectTrigger.dataset.openProject);
+      return;
+    }
+
+    const variantTab = event.target.closest("[data-variant-id]");
+    if (variantTab) {
+      const project = projects.find((item) => item.id === variantTab.dataset.variantProject);
+      const variant = project?.variants?.find((item) => item.id === variantTab.dataset.variantId);
+      if (!variant) return;
+      modalContent.querySelectorAll(".variant-tab").forEach((tab) => {
+        const active = tab === variantTab;
+        tab.classList.toggle("is-active", active);
+        tab.setAttribute("aria-selected", String(active));
+      });
+      const target = modalContent.querySelector("[data-variant-content]");
+      if (target) target.innerHTML = variantContent(variant);
+      return;
+    }
 
     if (event.target.closest("[data-modal-close]")) closeModal();
 
@@ -140,9 +237,9 @@
   });
 
   const init = async () => {
-    document.querySelector("[data-year]").textContent = String(new Date().getFullYear());
+    const year = document.querySelector("[data-year]");
+    if (year) year.textContent = String(new Date().getFullYear());
     observeReveals();
-
     try {
       const response = await fetch("data/projects.json");
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -151,9 +248,7 @@
       renderProjects();
     } catch (error) {
       console.error("No fue posible cargar los proyectos:", error);
-      if (grid) {
-        grid.innerHTML = `<p class="data-error">No fue posible cargar los proyectos. Verifica que el sitio se esté ejecutando desde un servidor web.</p>`;
-      }
+      if (grid) grid.innerHTML = `<p class="data-error">No fue posible cargar los proyectos.</p>`;
     }
   };
 
