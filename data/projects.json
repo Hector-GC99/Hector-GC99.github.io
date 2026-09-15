@@ -1,0 +1,160 @@
+[
+  {
+    "id": "central-monitoreo",
+    "order": "01",
+    "title": "Central de Monitoreo EC",
+    "subtitle": "Plataforma integral de operación y control",
+    "category": "Plataformas",
+    "featured": true,
+    "status": "Sistema interno",
+    "year": "2025–2026",
+    "summary": "Plataforma web centralizada para monitoreo, control operativo, auditoría y gestión de activos, con flujos diferenciados para monitoreo y operación.",
+    "challenge": "Centralizar procesos, seguimiento, incidencias, activos y evidencias que estaban distribuidos entre distintas funciones operativas.",
+    "solution": "Una plataforma modular con dashboards, KPIs, perfiles por rol, bitácoras, procesos operativos, auditoría y administración de activos.",
+    "role": "Análisis funcional, arquitectura, desarrollo, seguridad, evolución por sprints, pruebas y despliegue.",
+    "technologies": [
+      "PHP",
+      "JavaScript",
+      "JSON",
+      "cPanel",
+      "RBAC",
+      "Auditoría"
+    ],
+    "highlights": [
+      "Dashboard & KPIs",
+      "Roles multiusuario",
+      "Activos",
+      "Procesos operativos",
+      "Auditoría",
+      "Backups & seguridad"
+    ],
+    "url": "",
+    "accent": "mint"
+  },
+  {
+    "id": "adt-cotizaciones",
+    "order": "02",
+    "title": "ADT Smart Security",
+    "subtitle": "Experiencia web y flujo de cotización",
+    "category": "Desarrollo Web",
+    "featured": true,
+    "status": "Producción",
+    "year": "2026",
+    "summary": "Sitio público orientado a captación y cotización, con generación de folios, persistencia, notificaciones e instrumentación para medir conversiones.",
+    "challenge": "Convertir el interés comercial en un flujo digital claro, trazable y medible desde la página hasta la solicitud de cotización.",
+    "solution": "Landing responsiva con formularios, generación de folios, correo, almacenamiento e integración de eventos para analítica y campañas.",
+    "role": "Arquitectura, desarrollo, integraciones, seguridad, pruebas, despliegue y soporte de medición.",
+    "technologies": [
+      "PHP",
+      "JavaScript",
+      "Google Sheets",
+      "SMTP",
+      "GTM",
+      "GA4"
+    ],
+    "highlights": [
+      "Cotización Hogar / Negocio",
+      "Folios",
+      "Correos",
+      "Eventos de conversión",
+      "Integración Sheets",
+      "Responsive"
+    ],
+    "url": "https://alarmas.aerocomercial.mx/",
+    "accent": "blue"
+  },
+  {
+    "id": "adt-subdistribuidores",
+    "order": "03",
+    "title": "ADT Subdistribuidores",
+    "subtitle": "Portal de operación e integración",
+    "category": "Plataformas",
+    "featured": true,
+    "status": "Producción",
+    "year": "2026",
+    "summary": "Portal web para capturar y organizar la operación de subdistribuidores, integrado con Google Sheets y flujos seguros de comunicación.",
+    "challenge": "Estructurar la captura de información y sincronizarla con herramientas operativas sin depender de procesos manuales dispersos.",
+    "solution": "Portal desplegado en cPanel con formularios, validación, integración con Sheets, HMAC, correo y verificadores web para despliegues controlados.",
+    "role": "Diseño técnico, desarrollo, integración, seguridad, pruebas browser-based y despliegue en hosting compartido.",
+    "technologies": [
+      "PHP",
+      "JavaScript",
+      "Apps Script",
+      "Google Sheets",
+      "HMAC",
+      "cPanel"
+    ],
+    "highlights": [
+      "Sincronización Sheets",
+      "HMAC",
+      "SMTP",
+      "Validaciones",
+      "Pruebas web",
+      "Despliegue cPanel"
+    ],
+    "url": "https://sub.aerocomercial.mx/",
+    "accent": "amber"
+  },
+  {
+    "id": "sorn-codeus",
+    "order": "04",
+    "title": "SORN by Codeus",
+    "subtitle": "Atención y seguimiento asistidos por IA",
+    "category": "Desarrollo Web",
+    "featured": false,
+    "status": "Proyecto público",
+    "year": "2026",
+    "summary": "Solución enfocada en ordenar la atención y seguimiento de prospectos o clientes mediante IA, clasificación de solicitudes y canalización al equipo adecuado.",
+    "challenge": "Mejorar la forma en que se reciben, clasifican y atienden conversaciones comerciales y de servicio.",
+    "solution": "Experiencia digital alrededor de un asesor virtual capaz de apoyar la atención, organizar solicitudes y dirigirlas al flujo correspondiente.",
+    "role": "Participación en desarrollo e implementación de la solución web y su experiencia de uso.",
+    "technologies": [
+      "Web",
+      "IA",
+      "Automatización",
+      "UX",
+      "Integraciones"
+    ],
+    "highlights": [
+      "Atención asistida",
+      "Clasificación",
+      "Canalización",
+      "Seguimiento",
+      "Experiencia web"
+    ],
+    "url": "",
+    "accent": "violet"
+  },
+  {
+    "id": "odoo-soluciones",
+    "order": "05",
+    "title": "Odoo · Soluciones empresariales",
+    "subtitle": "ERP, CRM y automatización de procesos",
+    "category": "ERP / CRM",
+    "featured": true,
+    "status": "Implementaciones",
+    "year": "2025–2026",
+    "summary": "Conjunto de desarrollos y configuraciones en Odoo para inventario, movimientos, traspasos, recepciones, CRM, cartera, agenda y automatización de procesos internos.",
+    "challenge": "Llevar procesos operativos y comerciales a flujos controlados, relacionados y auditables dentro de una plataforma empresarial.",
+    "solution": "Modelos, reglas, automatizaciones y vistas adaptadas a procesos reales de inventario, TI y seguimiento comercial.",
+    "role": "Levantamiento, diseño funcional, configuración, Studio, automatizaciones, integraciones y mejora continua.",
+    "technologies": [
+      "Odoo",
+      "Studio",
+      "Python",
+      "PostgreSQL",
+      "n8n",
+      "CRM"
+    ],
+    "highlights": [
+      "Inventario",
+      "Traspasos",
+      "Recepciones",
+      "CRM",
+      "Cartera",
+      "Agenda Contact Center"
+    ],
+    "url": "",
+    "accent": "rose"
+  }
+]

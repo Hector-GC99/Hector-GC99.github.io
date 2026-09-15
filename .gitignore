@@ -1,0 +1,15 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary / local files
+*.log
+*.tmp
+*.bak
+.env
+.env.*
+
+# Optional local preview dependencies
+node_modules/
