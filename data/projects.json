@@ -29,7 +29,6 @@
     ],
     "url": "",
     "accent": "sky",
-    "preview": "assets/img/projects/central-monitoreo/01-acceso.webp",
     "gallery": [
       {
         "src": "assets/img/projects/central-monitoreo/01-acceso.webp",
@@ -56,19 +55,20 @@
         "title": "Portal de operación",
         "text": "Interfaz independiente para el levantamiento y seguimiento de solicitudes desde sitios autorizados."
       }
-    ]
+    ],
+    "cover": "assets/img/project-covers/central-monitoreo.svg"
   },
   {
-    "id": "aerocomercial-adt",
+    "id": "aerocomercial",
     "order": "02",
-    "title": "Aerocomercial / ADT",
-    "subtitle": "Plataformas web para procesos comerciales y operativos",
+    "title": "Aerocomercial",
+    "subtitle": "Plataformas web para servicios de seguridad y procesos comerciales",
     "category": "Desarrollo web",
     "featured": true,
     "status": "Sitios publicados",
     "year": "2026",
-    "summary": "Conjunto de soluciones web orientadas a cotización, captación de información, integraciones y soporte de procesos comerciales y operativos.",
-    "overview": "Desarrollo e implementación de soluciones web para distintos procesos comerciales y operativos relacionados con servicios ADT.",
+    "summary": "Plataformas web orientadas a cotización, captación de información e integración de procesos relacionados con servicios de seguridad y atención comercial.",
+    "overview": "Desarrollo e implementación de soluciones web para procesos comerciales y operativos relacionados con servicios de seguridad electrónica y monitoreo.",
     "role": "Arquitectura, desarrollo, integraciones, seguridad, pruebas y despliegue en hosting compartido.",
     "technologies": [
       "PHP",
@@ -88,12 +88,11 @@
     ],
     "url": "",
     "accent": "blue",
-    "previewKind": "split",
     "variants": [
       {
         "id": "cotizaciones",
         "label": "Cotizaciones",
-        "title": "Plataforma de Cotizaciones ADT",
+        "title": "Plataforma de Cotizaciones",
         "text": "Sitio orientado a la captación y procesamiento de solicitudes de cotización, con formularios, generación de folios, notificaciones y seguimiento de información.",
         "role": "Desarrollo, lógica de formularios, generación de folios, almacenamiento, correo, integraciones y configuración de medición digital.",
         "technologies": [
@@ -109,7 +108,7 @@
       {
         "id": "subdistribuidores",
         "label": "Subdistribuidores",
-        "title": "Portal de Subdistribuidores ADT",
+        "title": "Portal de Subdistribuidores",
         "text": "Plataforma web para registro y gestión de información relacionada con la operación de subdistribuidores.",
         "role": "Desarrollo e implementación de formularios, sincronización de información, correo y herramientas de validación para despliegue.",
         "technologies": [
@@ -122,7 +121,8 @@
         ],
         "url": "https://sub.aerocomercial.mx/"
       }
-    ]
+    ],
+    "cover": "assets/img/project-covers/aerocomercial.svg"
   },
   {
     "id": "codeus-sorn",
@@ -153,7 +153,7 @@
     ],
     "url": "https://www.codeus.com.mx/",
     "accent": "violet",
-    "previewKind": "codeus"
+    "cover": "assets/img/project-covers/codeus-sorn.svg"
   },
   {
     "id": "odoo-soluciones",
@@ -185,7 +185,6 @@
     ],
     "url": "",
     "accent": "rose",
-    "previewKind": "modules",
     "modules": [
       {
         "title": "Inventarios",
@@ -211,6 +210,7 @@
         "title": "Automatización",
         "text": "Reglas, acciones y validaciones asociadas a procesos."
       }
-    ]
+    ],
+    "cover": "assets/img/project-covers/odoo.svg"
   }
 ]

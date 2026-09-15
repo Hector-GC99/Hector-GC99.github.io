@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustración de módulos empresariales</title>
+  <desc id="desc">Núcleo modular conectado con inventario, CRM, agenda, documentos, traspasos y automatización.</desc>
+  <defs>
+    <linearGradient id="hub" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c6b7c6"/><stop offset="1" stop-color="#a89bb9"/></linearGradient>
+    <linearGradient id="module" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dfcfd6" stop-opacity=".82"/><stop offset="1" stop-color="#c6bed0" stop-opacity=".60"/></linearGradient>
+  </defs>
+  <g fill="none" stroke="#9a8295" stroke-width="2" stroke-linecap="round" opacity=".62">
+    <path d="M327 155H244c-25 0-26-48-58-48h-28"/><path d="M327 210H204"/><path d="M327 266H244c-25 0-26 48-58 48h-28"/>
+    <path d="M473 155h83c25 0 26-48 58-48h28"/><path d="M473 210h123"/><path d="M473 266h83c25 0 26 48 58 48h28"/>
+  </g>
+  <g fill="#99809a" opacity=".38"><circle cx="245" cy="155" r="4"/><circle cx="245" cy="266" r="4"/><circle cx="555" cy="155" r="4"/><circle cx="555" cy="266" r="4"/><circle cx="205" cy="210" r="4"/><circle cx="595" cy="210" r="4"/></g>
+  <g stroke="#8f768c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(76 68)"><rect width="90" height="82" rx="18" fill="url(#module)"/><path d="m28 31 17-9 17 9-17 9zM28 31v22l17 9 17-9V31M45 40v22" fill="none"/></g>
+    <g transform="translate(76 169)"><rect width="90" height="82" rx="18" fill="url(#module)"/><rect x="27" y="20" width="36" height="43" rx="5" fill="none"/><path d="M35 34h20M35 43h20M35 52h13" fill="none"/></g>
+    <g transform="translate(76 270)"><rect width="90" height="82" rx="18" fill="url(#module)"/><path d="M24 36h40M55 27l9 9-9 9M66 52H26M35 43l-9 9 9 9" fill="none"/></g>
+    <g transform="translate(634 68)"><rect width="90" height="82" rx="18" fill="url(#module)"/><circle cx="36" cy="33" r="9" fill="none"/><circle cx="57" cy="33" r="9" fill="none"/><path d="M20 61c2-12 9-18 16-18s14 6 16 18M44 61c2-12 8-18 14-18s12 6 14 18" fill="none"/></g>
+    <g transform="translate(634 169)"><rect width="90" height="82" rx="18" fill="url(#module)"/><rect x="24" y="24" width="42" height="38" rx="5" fill="none"/><path d="M24 37h42M35 18v12M55 18v12M34 47h5M45 47h5M56 47h5M34 56h5M45 56h5" fill="none"/></g>
+    <g transform="translate(634 270)"><rect width="90" height="82" rx="18" fill="url(#module)"/><circle cx="45" cy="41" r="15" fill="none"/><path d="M45 17v9M45 56v9M21 41h9M60 41h9M28 24l7 7M55 51l7 7M62 24l-7 7M35 51l-7 7" fill="none"/></g>
+  </g>
+  <g transform="translate(327 98)">
+    <path d="M73 0l73 42v140l-73 42L0 182V42z" fill="#cbbdcc" fill-opacity=".30" stroke="#8e778f" stroke-width="2.4"/>
+    <g transform="translate(24 49)">
+      <path d="M49 0l50 27-50 27L0 27z" fill="#d7cbd6" stroke="#90788e" stroke-width="2"/>
+      <path d="M0 27v32l49 27 50-27V27L49 54z" fill="url(#hub)" stroke="#90788e" stroke-width="2"/>
+      <path d="M0 68l49 27 50-27v30l-50 27L0 98z" fill="#b9aabc" stroke="#90788e" stroke-width="2"/>
+      <path d="M0 107l49 27 50-27v30l-50 27L0 137z" fill="#aa9bb2" stroke="#90788e" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

@@ -7,7 +7,7 @@ Código fuente de mi portafolio profesional publicado con GitHub Pages.
 La versión actual reúne cuatro casos principales:
 
 - Central de Monitoreo EC
-- Aerocomercial / ADT
+- Aerocomercial
 - Codeus SORN
 - Odoo · Soluciones empresariales
 

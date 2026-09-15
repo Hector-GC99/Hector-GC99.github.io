@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustración de conversación inteligente</title>
+  <desc id="desc">Núcleo conversacional conectado con mensajería, correo, web y atención.</desc>
+  <defs>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#96a9dd"/><stop offset=".55" stop-color="#8987c9"/><stop offset="1" stop-color="#a78bc7"/></linearGradient>
+    <linearGradient id="bubble" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c5c6e6" stop-opacity=".78"/><stop offset="1" stop-color="#b5a9d6" stop-opacity=".55"/></linearGradient>
+  </defs>
+  <g fill="none" stroke="#8a82ba" stroke-width="2" stroke-linecap="round" opacity=".58">
+    <path d="M166 104c85 0 92 58 164 58" stroke-dasharray="4 9"/>
+    <path d="M166 305c91 0 98-53 164-53" stroke-dasharray="4 9"/>
+    <path d="M634 104c-85 0-92 58-164 58" stroke-dasharray="4 9"/>
+    <path d="M634 305c-91 0-98-53-164-53" stroke-dasharray="4 9"/>
+  </g>
+  <g fill="#8880bc" opacity=".38"><circle cx="241" cy="131" r="4"/><circle cx="559" cy="131" r="4"/><circle cx="241" cy="277" r="4"/><circle cx="559" cy="277" r="4"/><circle cx="126" cy="209" r="3"/><circle cx="674" cy="209" r="3"/></g>
+  <g stroke="#7e74ad" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(78 62)"><rect width="92" height="84" rx="19" fill="url(#bubble)"/><path d="M23 27h47v29H42L29 66l3-10h-9z" fill="none"/><circle cx="38" cy="42" r="2.5" fill="#7e74ad"/><circle cx="47" cy="42" r="2.5" fill="#7e74ad"/><circle cx="56" cy="42" r="2.5" fill="#7e74ad"/></g>
+    <g transform="translate(78 264)"><rect width="92" height="84" rx="19" fill="url(#bubble)"/><rect x="23" y="28" width="46" height="31" rx="5" fill="none"/><path d="m25 31 21 17 21-17" fill="none"/></g>
+    <g transform="translate(630 62)"><rect width="92" height="84" rx="19" fill="url(#bubble)"/><path d="M46 24a18 18 0 1 0 0 36 18 18 0 0 0 0-36zM28 42h36M46 24c8 10 8 26 0 36M46 24c-8 10-8 26 0 36" fill="none"/></g>
+    <g transform="translate(630 264)"><rect width="92" height="84" rx="19" fill="url(#bubble)"/><path d="M30 53v-9a16 16 0 0 1 32 0v9M27 49h7v12h-7zM58 49h7v12h-7z" fill="none"/></g>
+  </g>
+  <g transform="translate(276 82)">
+    <path d="M124 0l112 64v128l-112 64L12 192V64z" fill="#b7b6df" fill-opacity=".26" stroke="#7a75b5" stroke-width="2.5"/>
+    <path d="M124 22l91 52v104l-91 52-91-52V74z" fill="url(#core)" fill-opacity=".72" stroke="#7a75b5" stroke-width="2"/>
+    <rect x="62" y="72" width="124" height="94" rx="35" fill="#d8d9ee" fill-opacity=".63" stroke="#756fad" stroke-width="2.4"/>
+    <path d="M90 72v-18c0-12 9-21 21-21h26c12 0 21 9 21 21v18" fill="none" stroke="#756fad" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="100" cy="117" r="8" fill="#6e78b6"/><circle cx="148" cy="117" r="8" fill="#6e78b6"/>
+    <path d="M100 142c14 11 34 11 48 0" fill="none" stroke="#786fad" stroke-width="4" stroke-linecap="round"/>
+    <rect x="80" y="174" width="88" height="37" rx="13" fill="#c1c4e6" fill-opacity=".70" stroke="#8079b4"/>
+    <path d="M98 188h52M98 198h37" fill="none" stroke="#766fa9" stroke-width="3" stroke-linecap="round" opacity=".74"/>
+  </g>
+</svg>

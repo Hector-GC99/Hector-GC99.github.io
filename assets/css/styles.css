@@ -122,23 +122,9 @@ button { color: inherit; }
 .project-status { display: inline-flex; align-items: center; gap: 8px; }
 .project-status i { width: 7px; height: 7px; border-radius: 50%; background: #6b96af; }
 .project-preview { position: relative; z-index: 1; flex: 1; min-height: 255px; margin: 24px 0; border-radius: 20px; overflow: hidden; }
-.project-preview-image { display: grid; place-items: center; padding: 16px; background: rgba(255,255,255,.47); border: 1px solid rgba(255,255,255,.8); }
-.project-preview-image img { width: 100%; height: 100%; max-height: 290px; object-fit: contain; filter: saturate(.82); }
-.project-preview-split { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: transparent; }
-.project-preview-split > div { min-width: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; border: 1px solid rgba(38,66,87,.12); border-radius: 19px; background: rgba(255,255,255,.48); }
-.project-preview-split small { color: #698296; letter-spacing: .11em; font-size: .61rem; }
-.project-preview-split strong { margin: 8px 0 5px; font: 700 1.2rem var(--font-display); }
-.project-preview-split span { color: #647789; font-size: .72rem; line-height: 1.35; }
-.project-preview-codeus { padding: 18px; display: flex; flex-direction: column; justify-content: center; gap: 15px; background: rgba(255,255,255,.38); border: 1px solid rgba(255,255,255,.65); }
-.mini-browser { display: flex; align-items: center; gap: 6px; padding: 11px 13px; border-radius: 12px; background: rgba(255,255,255,.74); color: #625f78; }
-.mini-browser span { width: 6px; height: 6px; border-radius: 50%; background: #b8b4c8; }
-.mini-browser b { margin-left: auto; font-size: .63rem; letter-spacing: .08em; }
-.codeus-message { padding: 22px 18px; border-radius: 16px; background: #77738d; color: #fff; font: 600 1rem var(--font-display); text-align: center; }
-.codeus-message i { padding: 0 5px; color: #ddd9e9; font-style: normal; }
-.codeus-nodes { display: flex; gap: 7px; justify-content: center; flex-wrap: wrap; }
-.codeus-nodes span { padding: 7px 10px; border-radius: 999px; background: rgba(255,255,255,.64); color: #666279; font-size: .66rem; }
-.project-preview-modules { display: flex; align-content: center; justify-content: center; flex-wrap: wrap; gap: 9px; padding: 30px; background: rgba(255,255,255,.34); border: 1px solid rgba(255,255,255,.62); }
-.project-preview-modules span { padding: 11px 14px; border-radius: 12px; background: rgba(255,255,255,.66); color: #6e5a62; font-size: .75rem; font-weight: 700; }
+.project-preview-vector { display: grid; place-items: center; padding: 4px 8px 0; overflow: visible; }
+.project-preview-vector img { width: 100%; height: 100%; max-height: 300px; object-fit: contain; object-position: center; }
+.project-preview-empty { min-height: 210px; }
 .project-body { position: relative; z-index: 2; }
 .project-category { margin: 0 0 8px; color: #607385; font-size: .67rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
 .project-body h3 { margin: 0 0 12px; font: 700 clamp(1.7rem,3vw,2.45rem)/1.05 var(--font-display); letter-spacing: -.04em; }
@@ -213,7 +199,7 @@ button { color: inherit; }
 .case-shot figcaption strong { display: block; margin-bottom: 4px; font: 700 .92rem var(--font-display); }
 .case-shot figcaption p { font-size: .78rem; line-height: 1.5; }
 
-/* ADT unificado */
+/* Aerocomercial: variantes del proyecto */
 .variants-section { padding-bottom: 20px !important; }
 .variant-tabs { display: flex; gap: 8px; margin-bottom: 16px; }
 .variant-tab { cursor: pointer; padding: 10px 14px; border: 1px solid var(--line); border-radius: 999px; background: #fff; color: #627586; font-size: .75rem; font-weight: 800; }

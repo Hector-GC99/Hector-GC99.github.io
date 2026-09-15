@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustración de plataforma de monitoreo</title>
+  <desc id="desc">Panel central conectado con módulos de sitios, datos, procesos y auditoría.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#b8d9e9" stop-opacity=".78"/>
+      <stop offset="1" stop-color="#8ebfd8" stop-opacity=".52"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#5e9fc4"/>
+      <stop offset="1" stop-color="#7297c8"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="#6da5c5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".66">
+    <path d="M162 116h70c27 0 25 32 49 32h35"/>
+    <path d="M162 294h67c28 0 29-31 53-31h34"/>
+    <path d="M638 116h-70c-27 0-25 32-49 32h-35"/>
+    <path d="M638 294h-67c-28 0-29-31-53-31h-34"/>
+  </g>
+  <g fill="#6eaaca" opacity=".36">
+    <circle cx="206" cy="116" r="4"/><circle cx="594" cy="116" r="4"/><circle cx="209" cy="294" r="4"/><circle cx="591" cy="294" r="4"/>
+    <circle cx="112" cy="210" r="3"/><circle cx="688" cy="210" r="3"/><circle cx="250" cy="82" r="3"/><circle cx="550" cy="335" r="3"/>
+  </g>
+  <g stroke="#5c91b2" stroke-width="2" stroke-linejoin="round">
+    <g transform="translate(82 72)">
+      <rect width="80" height="82" rx="18" fill="#c9e0ec" fill-opacity=".64"/>
+      <path d="M20 58V29l20-13 20 13v29M30 58V42h20v16M30 31h2M48 31h2" fill="none"/>
+    </g>
+    <g transform="translate(82 254)">
+      <rect width="80" height="82" rx="18" fill="#c9e0ec" fill-opacity=".64"/>
+      <circle cx="40" cy="41" r="17" fill="none"/>
+      <path d="M40 16v8M40 58v8M15 41h8M57 41h8M22 23l6 6M52 53l6 6M58 23l-6 6M28 53l-6 6" fill="none"/>
+    </g>
+    <g transform="translate(638 72)">
+      <rect width="80" height="82" rx="18" fill="#c9e0ec" fill-opacity=".64"/>
+      <ellipse cx="40" cy="26" rx="20" ry="9" fill="#a8cfe2" fill-opacity=".55"/>
+      <path d="M20 26v29c0 5 9 9 20 9s20-4 20-9V26M20 40c0 5 9 9 20 9s20-4 20-9" fill="none"/>
+    </g>
+    <g transform="translate(638 254)">
+      <rect width="80" height="82" rx="18" fill="#c9e0ec" fill-opacity=".64"/>
+      <path d="M40 15l21 9v16c0 16-9 26-21 32-12-6-21-16-21-32V24z" fill="#add2e4" fill-opacity=".42"/>
+      <path d="m31 42 7 7 13-16" fill="none" stroke-width="3"/>
+    </g>
+  </g>
+  <g transform="translate(250 90)">
+    <rect x="10" y="15" width="290" height="230" rx="26" fill="#9dc9df" fill-opacity=".20"/>
+    <rect width="290" height="230" rx="26" fill="url(#panel)" stroke="#4f8caf" stroke-width="2.4"/>
+    <rect x="22" y="20" width="246" height="26" rx="10" fill="#dbeaf2" fill-opacity=".70"/>
+    <circle cx="39" cy="33" r="4" fill="#629cbd"/><circle cx="52" cy="33" r="4" fill="#78afcb"/><circle cx="65" cy="33" r="4" fill="#8fc1d8"/>
+    <g transform="translate(22 64)">
+      <rect width="76" height="48" rx="12" fill="#d5e8f1" fill-opacity=".70"/>
+      <rect x="11" y="14" width="35" height="7" rx="3.5" fill="#70a9c7"/><rect x="11" y="27" width="53" height="6" rx="3" fill="#9cc7db"/>
+      <rect x="86" width="76" height="48" rx="12" fill="#d5e8f1" fill-opacity=".70"/>
+      <circle cx="112" cy="24" r="12" fill="url(#accent)" fill-opacity=".84"/><path d="M112 12v12h12" fill="none" stroke="#eaf4f8" stroke-width="3"/>
+      <rect x="172" width="76" height="48" rx="12" fill="#d5e8f1" fill-opacity=".70"/>
+      <rect x="184" y="15" width="50" height="6" rx="3" fill="#729fbc"/><rect x="184" y="27" width="36" height="6" rx="3" fill="#a0cadd"/>
+    </g>
+    <g transform="translate(22 128)">
+      <rect width="128" height="80" rx="14" fill="#d7e8f0" fill-opacity=".66"/>
+      <path d="M16 57l22-20 19 10 25-29 29 19" fill="none" stroke="#568faf" stroke-width="4"/>
+      <circle cx="38" cy="37" r="4" fill="#5d99ba"/><circle cx="82" cy="18" r="4" fill="#5d99ba"/><circle cx="111" cy="37" r="4" fill="#5d99ba"/>
+      <rect x="142" width="106" height="80" rx="14" fill="#d7e8f0" fill-opacity=".66"/>
+      <g fill="#679fbe"><rect x="157" y="16" width="18" height="46" rx="5"/><rect x="183" y="31" width="18" height="31" rx="5"/><rect x="209" y="23" width="18" height="39" rx="5"/></g>
+    </g>
+  </g>
+</svg>

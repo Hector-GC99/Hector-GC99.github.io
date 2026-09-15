@@ -28,25 +28,10 @@
   };
 
   const projectVisual = (project) => {
-    if (project.preview) {
-      return `<div class="project-preview project-preview-image"><img src="${escapeHtml(project.preview)}" alt="" loading="lazy"></div>`;
+    if (project.cover) {
+      return `<div class="project-preview project-preview-vector"><img src="${escapeHtml(project.cover)}" alt="" loading="lazy"></div>`;
     }
-    if (project.previewKind === "split") {
-      return `<div class="project-preview project-preview-split" aria-hidden="true">
-        <div><small>SITIO 01</small><strong>Cotizaciones</strong><span>Formulario · folios · medición</span></div>
-        <div><small>SITIO 02</small><strong>Subdistribuidores</strong><span>Operación · integración · datos</span></div>
-      </div>`;
-    }
-    if (project.previewKind === "codeus") {
-      return `<div class="project-preview project-preview-codeus" aria-hidden="true">
-        <div class="mini-browser"><span></span><span></span><span></span><b>CODEUS · SORN</b></div>
-        <div class="codeus-message">IA <i>→</i> clasifica <i>→</i> canaliza</div>
-        <div class="codeus-nodes"><span>Ventas</span><span>Soporte</span><span>Atención</span></div>
-      </div>`;
-    }
-    return `<div class="project-preview project-preview-modules" aria-hidden="true">
-      <span>Inventario</span><span>CRM</span><span>Traspasos</span><span>Agenda</span><span>Automatización</span>
-    </div>`;
+    return `<div class="project-preview project-preview-empty" aria-hidden="true"></div>`;
   };
 
   const projectCard = (project) => `
